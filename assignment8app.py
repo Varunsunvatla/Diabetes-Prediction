@@ -22,6 +22,7 @@ Glucose = st.number_input("Glucose", min_value=0)
 BloodPressure = st.number_input("BloodPressure", min_value=0)
 SkinThickness = st.number_input("SkinThickness", min_value=0)
 Insulin = st.number_input("Insulin", min_value=0.0, format="%.4f")
+DiabetesPedigreeFunction = st.number_input("DiabetesPedigreeFunction", min_value=0.0, format="%.4f")
 BMI = st.number_input("BMI", min_value=0.0, format="%.2f")
 if st.button("Predict outcome"):
     input_data = np.array([[
@@ -31,6 +32,7 @@ if st.button("Predict outcome"):
         BloodPressure,
         SkinThickness,
         Insulin,
+        DiabetesPedigreeFunction,
         BMI
     ]])
     # Predict
